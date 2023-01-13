@@ -2,14 +2,15 @@
 id: n0vp3ip2a0jjn2mchcoy6i1
 title: Church History
 desc: ''
-updated: 1673625935138
+updated: 1673629730646
 created: 1673613996784
 ---
 
-## Creeds are :
-- > authorized, consensual and public statements of essential christian belief.
 
 ## The Council debates emphasized the need for creeds. 
+Creeds are :
+- > authorized, consensual and public statements of essential christian belief.
+
 Reasons:
  * To have a consistent 'Traditional' theology
     - Tradition - 'Hand over or hand on (to) or hand down'
