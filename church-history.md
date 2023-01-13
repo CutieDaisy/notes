@@ -2,7 +2,7 @@
 id: n0vp3ip2a0jjn2mchcoy6i1
 title: Church History
 desc: ''
-updated: 1673625341866
+updated: 1673625935138
 created: 1673613996784
 ---
 
@@ -18,8 +18,8 @@ Reasons:
     - the scriptural basis for a 'Traditional' creed can be found in 1 Corinthians 15:3–4 :
     - > "I handed on to you as of first importance what I in turn had received: that Christ died for our sins in accordance with the scriptures, and that he was buried, and that he was raised on the third day in accordance with the scriptures"
         
-    * To combat heresies
-    * Political reason - (Constatine) which was to have a unified belief system to unite the roman empire
+* To combat heresies
+* Political reason - (Constatine) which was to have a unified belief system to unite the roman empire
 
 
 ## Two popular Creeds eventually emerged
