@@ -1,6 +1,7 @@
 // See https://aka.ms/new-console-template for more information
 
 using rna.Base.Extensions;
+using rna.Exceptions.Extensions;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
@@ -30,7 +31,7 @@ var json = JsonSerializer.Serialize(form); //.ToDictionary(c => c.ToString(), c 
 var diction = JsonSerializer.Deserialize<Dictionary<string, string>>(json)!;
 
 string inputs =
-    @"{title} <strong>{jsonjoin~value~</strong> <em>a.k.a.</em> <strong>=>oldName}</strong>, {initsmcase=>a=>s=>occupation} with service number {registrationNo} of {organisation}, 
+    @"{title} <strong>{JsonJoin~value-></strong> <em>a.k.a.</em> <strong>~=>oldName}</strong>, {InitSmCase~field->occupation->length->isEquals->8~=>a=>s=>occupation} with service number {registrationNo} of {organisation}, 
       and of {address}, wishes to be known and called {title} {newName} with effect from {effectiveDate}.
       All documents bearing {pronoun} former names are still valid.";
 
@@ -96,33 +97,129 @@ IEnumerable<string> GetFields(string template) {
 
 
 string ModifyValue(string[] modifiers, string value, Dictionary<string, string> formDiction) {
-
+    var map = "->";
+    var tilde = '~';
+    var valueIdentifier = $"{tilde}value{map}";
+    var fieldIdentifier = $"{tilde}field{map}";
     for (int i = 0; i < modifiers.Length; i++) {
         var modifierExpression = modifiers[i].Low();
 
         //var modifierWithConditions = modifierExpression.Split("~value.");
 
+        string[]? modifierWithExpression;
+        string modifierString = string.Empty;
+        string? modifierCondition = null;
+        string? modifierValue = null;
+        bool hasCondition = false;
+        bool isConditionMet = false;
+
+        if (modifierExpression.Contains(valueIdentifier)) {
+            modifierWithExpression = modifierExpression.Split(valueIdentifier);
+            modifierString = modifierWithExpression[0];
+            modifierValue = modifierWithExpression.Length > 1 ? modifierWithExpression[1]?.Trim() : null;
+
+            if (modifierValue is null) value.ThrowException($"No value was provide for the modifier: '{modifierString}");
+
+            if (!modifierValue.EndsWith(tilde)) value.ThrowException($"The modifier: '{modifierString} must end with '{tilde}'");
+
+            modifierValue = modifierValue.Trim(tilde);
+        }
+        else if (modifierExpression.Contains(fieldIdentifier)) {
+            modifierWithExpression = modifierExpression.Split(fieldIdentifier);
+            // jsonjoin~field->fieldName->valueProperty->isGreaterThan->value~
+            modifierString = modifierWithExpression[0];
+            var modifierArgs = modifierWithExpression.Length > 1 ? modifierWithExpression[1]?.Trim() : null;
+
+            if (modifierArgs is null) value.ThrowException($"No field arguments were provided for the modifier: '{modifierString}");
+
+            var args = modifierArgs.Split(map);
+
+            if (args.Length != 4) value.ThrowException($"The field option for the modifier: '{modifierString}' must have 3 arguments or mappers");
+
+            var fieldName = args[0];
+            var valueProperty = args[1]; // Length, value
+            modifierCondition = args[2];
+            modifierValue = args[3];
+
+            if (modifierValue is null) value.ThrowException($"No value was provide for the modifier: '{modifierString}");
+
+            if (!modifierValue.EndsWith(tilde)) value.ThrowException($"The modifier: '{modifierString} must end with '{tilde}'");
+
+            modifierValue = modifierValue.Trim(tilde);
 
 
-        var modifierWithConditions = modifierExpression.Split("~value~");
-        var modifierString = modifierWithConditions[0];
+            var modifierConditionEnum = modifierCondition?.GetEnumValue<TemplateModifierConditions>();
+
+            if (modifierConditionEnum != null) hasCondition = true;
+
+
+            if (formDiction.Where(d => d.Key.ToLower() == fieldName.ToLower()).FirstOrDefault() is { } item) {
+                var valuePropertyEnum = valueProperty.GetEnumValue<TemplateModifierValueProperty>();
+
+                isConditionMet = modifierConditionEnum switch {
+                    TemplateModifierConditions.IsGreaterThan => valuePropertyEnum switch {
+                        TemplateModifierValueProperty.value => item.Value.ToDecimal() > modifierValue.ToDecimal(),
+                        TemplateModifierValueProperty.length => item.Value.Length > modifierValue.ToInt(),
+                        _ => false
+                    },
+                    TemplateModifierConditions.IsGreaterThanOrEquals => valuePropertyEnum switch {
+                        TemplateModifierValueProperty.value => item.Value.ToDecimal() >= modifierValue.ToDecimal(),
+                        TemplateModifierValueProperty.length => item.Value.Length >= modifierValue.ToInt(),
+                        _ => false
+                    },
+                    TemplateModifierConditions.IsLessThan => valuePropertyEnum switch {
+                        TemplateModifierValueProperty.value => item.Value.ToDecimal() < modifierValue.ToDecimal(),
+                        TemplateModifierValueProperty.length => item.Value.Length < modifierValue.ToInt(),
+                        _ => false
+                    },
+                    TemplateModifierConditions.IsLessThanOrEquals => valuePropertyEnum switch {
+                        TemplateModifierValueProperty.value => item.Value.ToDecimal() <= modifierValue.ToDecimal(),
+                        TemplateModifierValueProperty.length => item.Value.Length <= modifierValue.ToInt(),
+                        _ => false
+                    },
+                    TemplateModifierConditions.IsEquals => valuePropertyEnum switch {
+                        TemplateModifierValueProperty.value => item.Value == modifierValue,
+                        TemplateModifierValueProperty.length => item.Value.Length == modifierValue.ToInt(),
+                        _ => false
+                    },
+                    TemplateModifierConditions.Contains => valuePropertyEnum switch {
+                        TemplateModifierValueProperty.value => item.Value.Contains(modifierValue),
+                        TemplateModifierValueProperty.length => throw item.ThrowException($"The property 'length' of the modifier: '{modifierString}' cannot use 'Contain' as a condition"),
+                        _ => false
+                    },
+                    TemplateModifierConditions.Like => valuePropertyEnum switch {
+                        TemplateModifierValueProperty.value => item.Value.Low().Contains(modifierValue.Low()),
+                        TemplateModifierValueProperty.length => throw item.ThrowException($"The property 'length' of the modifier: '{modifierString}' cannot use 'Like' as a condition"),
+                        _ => false
+                    },
+                    _ => false
+                };
+
+                //if (valuePropertyEnum == TemplateModifierValueProperty.value)
+                //    item.Value.Length
+            }
+
+
+        }
+        else modifierString = modifierExpression;
+
+
+
+
+
+
         TemplateModifier modifier = modifierString.GetEnumValue<TemplateModifier>();
 
-        var conditionalField = modifierWithConditions.Length > 1 ? modifierWithConditions[1] : null;
-
-
-        if (conditionalField is { } f && formDiction.Where(d => d.Key.ToLower() == f.ToLower()).FirstOrDefault() is { } d) {
-            //var hello = JsonSerializer.Deserialize<string[]>(d.Value);
-        }
+        var applyModifier = !hasCondition || (hasCondition && isConditionMet);
 
         value = modifier switch {
-            TemplateModifier.s => value.Split(" ")[0].Low() is { } a && (a == "a" || a == "an") ? value : value.MakeWordPlural(),
-            TemplateModifier.a => value.IsPlural() ? value : ("aeiou".Contains(value.Low().Substring(0, 1)) ? $"an" : "a") + $" {value}",
-            TemplateModifier.initupcase => value.ToPascalCase()!,
-            TemplateModifier.initsmcase => value.ToCamelCase()!,
-            TemplateModifier.upcase => value.Up(),
-            TemplateModifier.smcase => value.Low(),
-            TemplateModifier.jsonjoin => string.Join(conditionalField, JsonSerializer.Deserialize<string[]>(value)!),
+            TemplateModifier.s => applyModifier ? value.Split(" ")[0].Low() is { } a && (a == "a" || a == "an") ? value : value.MakeWordPlural() : value,
+            TemplateModifier.a => applyModifier ? value.IsPlural() ? value : ("aeiou".Contains(value.Low().Substring(0, 1)) ? $"an" : "a") + $" {value}" : value,
+            TemplateModifier.InitUpCase => applyModifier ? value.ToPascalCase()! : value,
+            TemplateModifier.InitSmCase => applyModifier ? value.ToCamelCase()! : value,
+            TemplateModifier.UpCase => applyModifier ? value.Up() : value,
+            TemplateModifier.SmCase => applyModifier ? value.Low() : value,
+            TemplateModifier.JsonJoin => applyModifier ? string.Join(modifierValue, JsonSerializer.Deserialize<string[]>(value)!) : value,
             _ => value
         };
     }
@@ -184,19 +281,19 @@ public enum TemplateModifier {
        /// The article a or an. 
        /// </summary>
        /// 
-    upcase, /// <summary>
+    UpCase, /// <summary>
             /// All Upper Casing
             /// </summary>
             /// 
-    smcase, /// <summary>
+    SmCase, /// <summary>
             /// All Small or lower Casing
             /// </summary>
             /// 
-    initupcase, /// <summary>
+    InitUpCase, /// <summary>
                 /// Initial letter Upper Casing
                 /// </summary>
                 /// 
-    initsmcase, /// <summary>
+    InitSmCase, /// <summary>
                 /// initial letter Lower Casing
                 /// </summary>
                 /// 
@@ -204,11 +301,17 @@ public enum TemplateModifier {
        /// Make word plural
        /// </summary>
        /// 
-    jsonjoin,
+    JsonJoin,
 }
 
 public enum TemplateModifierArgType {
     field, value
+}
+public enum TemplateModifierValueProperty {
+    length, value
+}
+public enum TemplateModifierConditions {
+    IsGreaterThan, IsGreaterThanOrEquals, IsLessThan, IsLessThanOrEquals, IsEquals, Contains, Like
 }
 
 public enum GenderEnum { Male, Female }
