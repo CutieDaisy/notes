@@ -52,3 +52,10 @@
 - Univocal
 - Ethereal
 - accentuate
+- rivulet
+- pretext
+- ardently
+- epistemic
+- vestiges
+- syllogistically
+- dialogical

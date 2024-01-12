@@ -16,3 +16,7 @@ What is free will? Being the source of your actions and the ability to do otherw
 Compatibilism, Libertarianism, Open Theism
 
 Antecedence
+
+John Polkinghorne
+Karl Barth
+Hans Urs von Balthasar - “theological aesthetics” rather than an “aesthetic theology.” i.e. We do not approach God through beauty; rather, God approaches us through the beauty of Christ.
