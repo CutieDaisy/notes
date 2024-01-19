@@ -30,3 +30,6 @@ is impossible for God to be caused, we can never demonstrate His existence throu
 - Modus tollens
 - Actuality and Potentiality
 - _Ontological Identity Thesis_ vs _Conceptual Identity Thesis_
+
+
+accilla theologiae
