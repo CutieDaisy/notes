@@ -33,3 +33,8 @@ is impossible for God to be caused, we can never demonstrate His existence throu
 
 
 accilla theologiae
+
+contrivance
+artificer
+teleological argument
+florid
