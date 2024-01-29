@@ -1,0 +1,6 @@
+**28th January 2024**
+**Teaching at a meeting**
+I stood in front of a crowd, a meeting of a sort or possibly a teaching session and I remember speaking and teaching them something. I also remember that in the course of the teaching, I wondered how I was going to do it well and properly but I continued without any fear and even made some jokes to which they laughed at. Getting to the later part of the discussion or teaching, I remember saying that 'Women will let you buy them things and make you pay them for it' - I think this was what made them laugh.
+I made it clear to them that I wanted to give them an example of what I had just said. In the dream I could remember or rather see that I had bought a pair of shoes for Glory and she was putting them on and the statement I had made had something to do with what I was seeing in my mind or remembering whiles I stood in front of them.
+But it looked either like we had spent a long time at the meeting or that someone stood up and left the meeting or both and the rest began to leave till everyone left.
+Again I remember that before I began speaking, my mother came to me and requested I allow Daniel Papanko speak or help in the discussion or teaching. I said no bcs there were things he had done which I could get into the details of at the current moment.

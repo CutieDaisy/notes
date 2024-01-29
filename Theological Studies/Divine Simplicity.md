@@ -38,3 +38,4 @@ contrivance
 artificer
 teleological argument
 florid
+anthropology

@@ -14,7 +14,9 @@
 
 - This form of the kalam argument has been widely debated in recent years. One of its most significant defenders has been William Lane Craig (born 1949)
 - William Lane Craig is a contemporary philosopher and theologian.
-- Craig's version of the kalam argument is based on two premises: (1) everything that begins to exist has a cause of its existence, and (2) the universe began to exist
+- Craig's version of the kalam argument is based on two premises: 
+  (1) everything that begins to exist has a cause of its existence, and 
+  (2) the universe began to exist
 - From these premises, Craig infers that the universe has a cause of its existence, which he identifies as Transcending the entire universe which brought the universe into being.
 
 **The main challenges to the kalam argument**
