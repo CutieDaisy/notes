@@ -8,11 +8,11 @@ docker run -p 7721:7721 [image name eg: papss-bridge2]
 
 ## View All Container's Configuration And Settings
 docker inspect <container_name_or_id>
-docker inspect --format '{{json .NetworkSettings}}' <container_name_or_id>
-## View Container's Environment Variables
+## View Specific Container Variables
 docker exec sqlserver env
 docker inspect --format '{{.Config.Env}}' <container_name_or_id>
 docker inspect --format '{{json .Config.Env}}' <container_name_or_id>
+docker inspect --format '{{json .NetworkSettings}}' <container_name_or_id>
 
 
 
