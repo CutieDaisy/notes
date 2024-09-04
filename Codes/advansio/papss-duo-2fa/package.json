@@ -1,0 +1,24 @@
+{
+  "name": "@duosecurity/duo_universal_example",
+  "version": "2.0.2",
+  "description": "Duo Universal Node.js example",
+  "main": "src/index.js",
+  "scripts": {
+    "preinstall": "cd ../ && npm run build_for_example --silent || echo",
+    "build": "ncc build index.js -o dist",
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "@duosecurity/duo_universal": "^2.0.2",
+    "body-parser": "^1.20.1",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "node-localstorage": "^3.0.5",
+    "nunjucks": "^3.2.4"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1"
+  }
+}
