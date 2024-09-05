@@ -1,0 +1,60 @@
+<!--
+SPDX-FileCopyrightText: 2021 Lukas Hroch
+
+SPDX-License-Identifier: MIT
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href='/style.css'>
+  <title>2FA Token Prompt</title>
+
+  <script type="text/javascript">
+
+    function sendDataToParent() {
+      window.close();
+    }
+
+    function receiveData(data) {
+      // document.getElementById("receivedData").innerText = data;
+      console.log("Received data from parent :::: ", data);
+    }
+  </script>
+</head>
+
+<body>
+  <div class="content">
+    <div class="logo">
+      <img src="/images/logo.png">
+    </div>
+    <div class="auth-resp">
+      <!-- <h3><b>2FA Login</b></h3> -->
+    </div>
+    <div class="success">
+      <pre class="auth-token"><code class="auth-token" id="message">Successfully Authorized!</code></pre>
+    </div>
+    <div class="auth-resp"> Please close window</div>
+    <!-- <button class="auth-resp" onclick="sendDataToParent()">OK</button> -->
+  </div>
+
+  <div id="message-container" style="display: none;">
+    {{message}}
+  </div>
+  <script>
+    // Get the message data from the hidden div
+    const messageContainer = document.getElementById('message-container');
+    const message = messageContainer.textContent;
+    const messageData = JSON.parse(messageContainer.textContent);
+
+    // Now you can use messageData in your JavaScript
+    console.log(messageData);
+    window.opener.localStorage.setItem('duo-data', message);
+    localStorage.setItem('duo-data', message);
+  </script>
+
+</html>
