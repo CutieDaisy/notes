@@ -40,9 +40,16 @@
    cmd: docker build --no-cache -t papss-bridge2 .
    cmd: docker run --restart always --name papss-bridge2 -p 7221:7221 -v /opt/papss-bridge2/logs/:/logs/ -d papss-bridge2
 
-   iii Navigate to papss-web directory on the Prod server and run the ff
+   iii Create the directory /usr/share/nginx/html
+   cmd: mkdir -p /usr/share/nginx/html
+
+   iv Create the file default.conf in the /etc/nginx/conf.d/ directory
+   cmd: mkdir -p /etc/nginx/conf.d/
+   cmd: cd /etc/nginx/conf.d/
+   cmd: touch default.conf
+
+   iv Navigate to papss-web directory on the Prod server and run the ff
    **NB : Please note the dot at the end of the command**
    cmd: docker build --no-cache -t papss-web .
    cmd: docker run --restart always --name papss-web -p 80:80 -d papss-web
 
-   We need the **Default.config** file

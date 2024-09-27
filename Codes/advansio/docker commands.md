@@ -51,45 +51,11 @@ docker ps
 
 docker logs [container name eg: papss-bridge2]
 
-Papss Deployment Document
 
-ifconfig
-2 EXIT
-3 exit
-4 cat /etc/os-release
-5 apt update
-6 apt upgrade
-7 sudo apt-get update
-8 sudo apt-get install ca-certificates curl
-9 sudo install -m 0755 -d /etc/apt/keyrings
-10 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-11 sudo chmod a+r /etc/apt/keyrings/docker.asc
-12 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
- 13 $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-14 sudo apt-get update
-15 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-16 docker ps -a
-17 docker pull postgres
-18 ls
-19 docker ps -a
-20 docker images
-21 docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d postgres
-22 docker ps -a
-23 docker run -it --rm postgres psql -h 172.17.0.1 -U postgres
-24 docker run -it --rm postgres psql -h 172.17.0.1 -U papss
-25 cd /opt/
-26 mkdir papss-bridge1
-27 cd papss-bridge1/
-28 nano Dockerfile
-29 docker buidl -t --no-cache papss-bridge1 .
-30 docker build -t --no-cache papss-bridge1 .
-31 docker build --no-cache -t papss-bridge1 .
-32 init 6
-33 docker ps -a
-34 docker start postgres
+## View Container files
+docker exec -it <container_name> /bin/sh
+OR
+docker exec -it <container_name> /bin/bash
 
-docker build --no-cache -t papss-bridge2 .
-
-docker run --name papss-bridge1 -p 9021:9021 -v /opt/papss-bridge1/logs/:/logs/ -d papss-bridge1
-
-docker run --name papss-bridge2 -p 7221:7221 -v /opt/papss-bridge2/logs/:/logs/ -d papss-bridge2
+## Copy files from or to Container
+docker cp <container>:/file/path/nginx/html/main.585967f5c5468100.js ./
