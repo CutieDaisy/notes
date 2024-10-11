@@ -4,22 +4,23 @@
 
 - **Historical Development**: Various interpretations of the sacraments' roles have emerged throughout Christian theological history.
 - **Four Key Views**: In this summary we shall look at four significant perspectives on the sacraments' functions.
-- **Compatibility**: These views we are going to look at are not mutually exclusive; for instance, the idea that sacraments convey grace aligns with the belief that they reassure believers of God's promises.
+- **Compatibility**: These views are not mutually exclusive; for instance, the idea that sacraments convey grace aligns with the belief that they reassure believers of God's promises.
 - **Debate Focus**: The main debate revolves around which functions are essential for a proper understanding of the sacraments.
 <!-- - **Theological Approaches**: Most theologians incorporate multiple themes in their overall approach to sacraments, though they may emphasize different aspects. -->
 
 
+1st Function of the Sacraments
 ## Sacraments convey Grace ----------------------------------------------------------------------
 
 - **Medieval Emphasis**: Medieval writers insisted that sacraments convey the grace they signify.
 - **Early Traces**: For instance, Ignatius of Antioch describe the Eucharist as “the medicine of immortality.”
-- **Ambrose of Milan**: In the fourth century, Ambrose argued that the Holy Spirit, through baptism, effects regeneration.
-- **Augustine's Distinction**: Augustine distinguished between the sacrament as a sign and it as a "force" (virtus).
-- For Augustine and his medieval successors, a major function of the sacraments is the efficacious bestowal of grace.
+- **Ambrose of Milan**: In the fourth century, Ambrose of Milan argued that the Holy Spirit, through baptism, effects regeneration.
+- **Augustine's Distinction**: Also Augustine distinguished between the sacrament as a sign and it as a "force" (virtus).
+- For Augustine and successors, a major function of the sacraments is the efficacious bestowal of grace.
 
-- **Duns Scotus' View**: Medieval writers sympathetic to Duns Scotus argued against the idea that sacraments strictly cause grace.
+- **Duns Scotus' View**: Moreover, Medieval writers sympathetic to Duns Scotus argued against the idea that sacraments strictly cause grace.
 - Peter of Aquila, (clarifying Peter Lombard statement on the subject) emphasized that sacraments do not cause grace by themselves; rather, it is God who effects grace.
-- **Causa Sine Qua Non**: Sacraments are to be seen as indispensable preconditions (causa sine qua non) rather than direct causes of grace.
+- **Causa Sine Qua Non**: Therefore, sacraments according to these writers are to be seen as indispensable preconditions (causa sine qua non) rather than direct causes of grace.
 - Catholic Theology also insists that God is the agent, remote efficient cause, and the final cause of grace in any legitimate theory of sacramental causality.
 
 # Rejection by Reformers
@@ -33,14 +34,15 @@
 ## --------------------------------------------------------------------------------------------------------
 
 
-## Sacrament Strengthen faith -----------------------------------------------------------------
+2nd Function of the Sacraments
+## Sacraments Strengthen faith -----------------------------------------------------------------
 
 - **Reformation Significance**: During the sixteenth-century Reformation, sacraments gained special importance due to the emphasis on trust (fiducia) as a key component of justifying faith.
 - **Response to Human Weakness**: Reformers viewed sacraments as God's response to human frailty, providing visible and tangible signs of divine promises.
 
 
 Let's look at 4 groups of people who saw the sacraments as catalyst to strengthen faith 
-# 1st is Melanchthon
+# 1st is Philip Melanchthon
 <!-- - **Philip Melanchthon's View**: In his 1521 "Propositions on the Mass," Melanchthon highlighted sacraments as a gracious accommodation to human weakness.
 - **Reassurance and Reminder**: Melanchthon emphasized that signs (i.e. sacraments) serve to remind and reassure believers of the word of faith. -->
 
@@ -67,6 +69,7 @@ Let's look at 4 groups of people who saw the sacraments as catalyst to strengthe
 ## ------------------------------------------------------------------------------------------------------------
 
 
+3rd Function of the Sacraments
 ## Sacraments enhance unity and commitment in the Church -------------------------------------------------------
 
 - The unity of the church was a significant issue during the patristic period, especially due to divisions from the Decian and Diocletian persecutions.
@@ -94,7 +97,7 @@ community
 ## --------------------------------------------------------------------------------------------------------
 
 
-
+4th Function of the Sacraments
 ## Sacrament reassures us of God's promises towards us -----------------------------------------------------
 
 - **Emphasis on Faith**: The Reformers recognized the need for reassurance of God's love and commitment due to human frailty.
@@ -102,8 +105,8 @@ community
 - **Testament Concept**: In his 1520 work, Luther explained that a testament involves the death of the testator, a promise of inheritance, and the identification of heirs.
 - **Christ's Testament**: Christ's words during the Last Supper ("This is my body... This is my blood...") are seen as His testament, promising or assuring forgiveness of sins and designating believers as heirs.
 
-- **Testament Concept**: Luther emphasized that a testament involves promises that become effective after the death of the testator.
-- **There three Key Points** the Eucharist liturgy demonstrates:
+- **Testament Concept**: According Luther a testament involves promises that become effective after the death of the testator, and that 
+- There are three Key Points the Eucharist liturgy demonstrates:
   1. Affirms the promises of grace and forgiveness.
   2. Identifies the recipients of these promises.
   3. Declares the death of the one who made these promises.
