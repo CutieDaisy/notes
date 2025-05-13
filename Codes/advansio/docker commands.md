@@ -8,6 +8,11 @@ docker build --no-cache -t [image name eg: papss-bridge2] .
 ## Run
 
 docker run -p 7721:7721 [image name eg: papss-bridge2]
+# More Examples :
+ docker run --restart always --name papss-bridge1-09052025 -p 11000:11000 -v /opt/papss-bridge1/:/opt/papss-bridge1/ -v /opt/papss-bridge1/logs/:/logs/ -e PAPSS_ID=LR100012 -e PAPSS_BRIDGE2_BASE_URL=http://172.17.0.1:10500/ --log-opt max-size=10m --log-opt max-file=3 -d papss-bridge1-09052025 
+ 
+ docker run --restart always --name papss-web-21032025 -p [::]:443:80 -p 0.0.0.0:443:80 -d papss-web-21032025
+
 
 ## Running Papss-Bridge2 Container with Env Variables
 
