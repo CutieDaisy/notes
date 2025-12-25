@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fxRateUpdate xmlns="urn:montran:fxrateUpdate.001">
+    <MmbId>{0}</MmbId>
+    <MsgId>{1}</MsgId>
+    <CreDt>{2}</CreDt>
+    <FxRate accountType="SSA_3" buyRate="{3}" countryCode="{4}" localCurrency="{5}" name="{0}-SSA_3-DEF-{5}-USD" sellRate="{6}" />
+    <Sgntr>
+    </Sgntr>
+</fxRateUpdate>
