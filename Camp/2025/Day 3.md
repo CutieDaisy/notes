@@ -82,3 +82,44 @@ Knowledge can puff up: 1 Corinthians 8:1
 
 
 
+Mindset you need for a life of Holiness :
+1. 1 Peter 4:1-3
+"Since therefore Christ suffered in the flesh, arm yourselves with the same way of thinking, for whoever has suffered in the flesh has ceased from sin, 
+so as to live for the rest of the time in the flesh no longer for human passions but for the will of God.
+For you have spent enough time in the past doing what the Gentiles choose to do, living in sensuality, passions, drunkenness, orgies, drinking parties, and lawless idolatry.
+Therefore let those who suffer according to God’s will entrust their souls to a faithful Creator while doing good."
+
+2. You do not belong to yourself : 2 Corinthians 5:15 ESV
+"And he died for all, that those who live might no longer live for themselves but for him who for their sake died and was raised."
+ **You are not your own** : 1 Corinthians 6:19-20 ESV
+"Or do you not know that your body is a temple of the Holy Spirit within you, whom you have from God? You are not your own, for you were bought with a price. So glorify God in your body."
+
+3. Luke 14:26 ESV - **Hate yourself and your loved ones**
+"If anyone comes to me and does not hate his own father and mother and wife and children and brothers and sisters, yes, and even his own life, he cannot be my disciple."
+
+4. Act 2:40 ESV - **Save yourselves from this crooked generation**
+"And with many other words he bore witness and continued to exhort them, saying, 'Save yourselves from this crooked generation.'"
+Proverbs 1:10 ESV - "My son, if sinners entice you, do not consent."
+
+5. James 1:27 ESV - **Keep yourself unstained from the world**
+"Religion that is pure and undefiled before God the Father is this: to visit orphans and widows in their affliction, and to keep oneself unstained from the world."
+
+6. 2 Corinthians 6:16-18 ESV - **Come out from among them and be separate**
+"What agreement has the temple of God with idols? For we are the temple of the living God. As God has said: 'I will dwell in them and walk among them, and I will be their God, and they shall be my people.'
+Therefore go out from their midst, and be separate from them, says the Lord, and touch no unclean thing; then I will welcome you.
+And I will be a father to you, and you shall be sons and daughters to me,says the Lord Almighty."
+
+7. **Fear the Lord** Knowing the terror of the Lord : 2 Corinthians 5:11 ESV
+"Therefore, knowing the fear of the Lord, we persuade others. But what we are is known to God, and I hope it is known also to your conscience."
+
+8. 2 Peter 1:3-4 ESV - **Divine power has granted to us all things that pertain to life and godliness**
+"His divine power has granted to us all things that pertain to life and godliness, through the knowledge of him who called us to his own glory and excellence, by which he has granted to us his precious and very great promises, so that through them you may become partakers of the divine nature, having escaped from the corruption that is in the world because of sinful desire."
+
+9. Ephesians 5:26-27 ESV - **Present you holy and blameless**
+"That he might sanctify her, having cleansed her by the washing of water with the word, 
+so that he might present the church to himself in splendor, without spot or wrinkle or any such thing, that she might be holy and without blemish."
+
+10. Do not make a name for yourself - Genesis 11:4 ESV
+"Then they said, 'Come, let us build ourselves a city and a tower with its top in the heavens, and let us make a name for ourselves, lest we be dispersed over the face of the whole earth.'"
+
+
