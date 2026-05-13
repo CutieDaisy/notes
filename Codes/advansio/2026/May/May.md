@@ -24,7 +24,7 @@ Today's Checked Tasks (2026-05-29):
     * The code needs to be updated to parse the Id as a long value instead of an int.
 
 * Had a meeting with Access Bank Liberia : 
-    * to change their ldap server and port from ldaps://172.18.1.3:389 to ldap://172.18.1.2:636 to enable secure connection to their ldap server.
+    * to change their ldap server and port from ldap://172.18.1.3:389 to ldap://172.18.1.2:636 to enable secure connection to their ldap server.
     * This change was not successful. 
     * Meeting rescheduled for tomorrow to troubleshoot the issue and find a solution.
 
