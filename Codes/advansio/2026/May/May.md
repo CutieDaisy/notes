@@ -36,3 +36,15 @@ Today's Checked Tasks (2026-05-29):
 * GP Payment
 
 
+
+Agent Banking Redesign
+USSD
+AF8
+TPS
+Go-Papss
+Bloom Switch
+Collections
+Salam Kalpeh
+E-Alert
+
+
