@@ -21,3 +21,11 @@
 3. We had to modify the WalletTransaction entity field for GST from string to decimal in the Internet Banking Db
 
 4. We had to modify the Transaction table's Narration field length from 150 to 450 in the New Agent Banking DB
+
+5. Create Retail View on the Retail DB : vw_combined_users
+    SCRIPT:
+    CREATE view [dbo].[vw_combined_users] as 
+        select TRIM(lower(UserName)) as username, 'Bank' as Channel from [RETAIL_DB].dbo.Customers
+        union
+        select trim(lower(au.NormalizedUserName)) as username , 'Wallet' as Channel  from [AgencyBanking].dbo.ApplicationUsers au  where au.Id in (select ApplicationUserId from [AgencyBanking].dbo.Customers) ;
+        GO
