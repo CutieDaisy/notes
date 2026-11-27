@@ -4,17 +4,7 @@ Thank you for your detailed submission regarding the proposed upgrades and enhan
 
 Following an initial review of the requirements, I am pleased to confirm that the requested enhancements are technically feasible and can be incorporated into the existing system architecture. The requirements have been grouped into three major enhancement areas:
 
-**1\. Integrated Gazette Publication Module**
-
-Key capabilities to be developed include:
-
-- Automated name number generation based on configurable numbering rules.
-- Gazette layout and publication design templates.
-- Text formatting and publication arrangement according to Gazette standards.
-- Generation of complete print\-ready PDF editions.
-- Centralized management of publication versions and archives.
-
-**2\. Service Category Upgrade (Top\-Up) Functionality**
+**1\. Service Category Upgrade (Top\-Up) Functionality**
 
 The proposed service upgrade feature can be incorporated into the payment and application management workflow.
 
@@ -28,7 +18,7 @@ The module will support:
 
 This enhancement will provide greater flexibility to applicants while ensuring accountability and transparency.
 
-**3\. Advanced Reporting and Management Information System**
+**2\. Advanced Reporting and Management Information System**
 
 A comprehensive reporting module can be developed to support operational monitoring and management decision\-making.
 
